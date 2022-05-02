@@ -1,4 +1,4 @@
-//EPISODE 1. Universally considered the weakest. Not by me.
+//EPISODE 1
 const scenario = {
     murderer: 'Miss Scarlet',
     room: 'Library',
@@ -16,7 +16,7 @@ console.log(verdict);
 
 
 
-//EPISODE 2: Underrated.
+//EPISODE 2
 const murderer = 'Professor Plum';
 
 const changeMurderer = function () {
@@ -35,7 +35,7 @@ console.log(verdict);
 
 
 
-//EPISODE 3: Saw it five times.
+//EPISODE 3
 let murderer = 'Professor Plum';
 
 const declareMurderer = function () {
@@ -53,7 +53,7 @@ console.log('Second Verdict: ', secondVerdict);
 
 
 
-//EPISODE 4: Classic.
+//EPISODE 4
 let suspectOne = 'Miss Scarlet';
 let suspectTwo = 'Professor Plum';
 let suspectThree = 'Mrs. Peacock';
@@ -71,7 +71,7 @@ console.log(`Suspect three is ${suspectThree}.`);
 
 
 
-//EPISODE 5: The best.
+//EPISODE 5
 const scenario = {
     murderer: 'Miss Scarlet',
     room: 'Kitchen',
@@ -94,7 +94,7 @@ console.log(verdict);
 
 
 
-//EPISODE 6: Controversial opinion: The worst.
+//EPISODE 6
 let murderer = 'Colonel Mustard';
 
 const changeMurderer = function () {
@@ -119,7 +119,7 @@ console.log(verdict);
 
 
 
-//EPISODE 7: Meh.
+//EPISODE 7
 let murderer = 'Professor Plum';
 
 const changeMurderer = function () {
@@ -150,7 +150,7 @@ console.log(verdict);
 
 
 
-//EPISODE 8: Fanboys suck. It rocks.
+//EPISODE 8
 const scenario = {
     murderer: 'Mrs. Peacock',
     room: 'Conservatory',
@@ -190,7 +190,7 @@ console.log(verdict);
 
 
 
-//EPISODE 9: Please, no more.
+//EPISODE 9
 let murderer = 'Professor Plum';
 
 if (murderer === 'Professor Plum') {
@@ -204,4 +204,4 @@ const declareMurderer = function () {
 const verdict = declareMurderer();
 console.log(verdict);
 //Predicted Result: This should return "The murderer is Mrs. Peacock". The === doesn't permanently assign Professor Plum as the murderer, so the let murderer = 'Mrs. Peacock' function overwrites it.
-//Actual Result: Returned the opposite. Not completely sure how it's working, but it seems like 'Mrs. Peacock' isn't being accessed. It may be because the let statement cannot ovewrite the original based on the fact that the same value has been stated twice before? I dunno.
+//Actual Result: Returned the opposite. On reflection, this is because the let murderer = Mrs. Peacock is creating a local variable that isn't being called anywhere else. Removing the let should allow it to run and return 'Mrs. Peacock'.
